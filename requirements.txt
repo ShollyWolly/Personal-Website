@@ -1,0 +1,13 @@
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+psycopg2
+uWSGI
+Werkzeug
+datetime
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width height=device-height">
+    <meta name="robots" content="noindex"/>
+    <title>Alexanders Website</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Pictures/Regression-Logo-trans.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/homeserver.css')}}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="content">
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li class="about"><a href="/#about_navigate">Über Mich</a></li>
+                    <li class="skills"><a href="/#skills_navigate">Kenntnisse</a></li>
+                    <li class="contact"><a href="/#contact_navigate">Kontakt</a></li>
+                    <li><a href="/projects">Projekte</a></li>
+                    <li><a href="#">Lebenslauf</a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <canvas id="particles-js"></canvas>
+
+    <div class="Spacing"></div>
+
+    <section class="Page-Container", id="about">
+        <div id="about_style">
+            <div id="aboutText">
+                <h3>Homeserver und Webseite</h3>
+                <p>Seit dem ich mit der Programmierung angefangen habe, wollte ich schon immer meine eigene Webseite haben und diese auch selber "Hosten". Aus dieser Motivation heraus habe ich mir den RaspberryPi gekauft. Jedoch bemerkte ich, dass der Webserver und Loadbalancer auf dem Pi kaum ressourcen in anspruch nimmt. Daraus folgte, dass ich weitere Programme auf dem Pi hoste, wie z.B. ein Samba file sharing für Netzwerkstorage oder alles in Docker-Containern aufbauen um alles besser managen zu können. In Zukunft werde ich wahrscheinlich noch mehr Produkte selber hosten.</p>
+            </div>
+                <div id="aboutImg"><a href="/static/Pictures/Raspi-Network.png" target="_blank"><img src="{{ url_for('static', filename='Pictures/Raspi-Network.png')}}"></div></a>
+            </div>
+      </section>
+
+    <footer>
+        <p>Copyright &copy; 2021 Alexander Hilberer</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='JS/Nav-Bar.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/main.js')}}"></script>
+
+</body>
+
+</html>

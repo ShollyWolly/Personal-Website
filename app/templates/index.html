@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width height=device-height">
+    <meta name="robots" content="noindex"/>
+    <title>Alexanders Website</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Pictures/Regression-Logo-trans.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/sheet.css')}}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="content">
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li class="about"><a href="#about_navigate">Über Mich</a></li>
+          <li class="skills"><a href="#skills_navigate">Kenntnisse</a></li>
+          <li class="contact"><a href="#contact_navigate">Kontakt</a></li>
+          <li><a href="./projects">Projekte</a></li>
+          <li><a href="{{ url_for('download_file')}}">Lebenslauf</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <div id="container">
+
+      <canvas id="particles-js"></canvas>
+
+        <div class="Page-Container">
+          <div id="Intro">
+            <p>Hallo, ich bin Alexander und ein</p>
+            <p>Newcomer <span class="txt-type" data-wait="2000" data-words='["Data Scientist", "Business Analyst", "Software Engineer"]'></span></p>
+          </div>
+        </div>
+
+        <div class="Spacing", id="about_navigate"></div>
+        <section class="Page-Container", id="about">
+          <div id="about_style">
+            <div id="aboutText">
+              <h3>Über Mich</h3>
+              <p>Mein Name ist Alexander Hilberer und zurzeit studiere an der Hochschule in Trier, wo ich in naher Zukunft meinen Bachelor of Science in Wirtschaftsinformatik erhalten werde. Meinen Schwerpunkt hier setzte ich auf analytisch orientierte Themen, wie Business Analytics, maschinelles Lernen und Data Visualisation.</p>
+              <p>Ich bin der Auffassung, dass Daten die Grundlage eines heutzutage funktionierenden Unternehmens sind, deshalb habe ich mit zum Ziel gesetzt so viel über statistische Modelle, Big Data Technologien und Business Understanding zu lernen wie möglich.</p>
+              <p>Ich bin sehr vertraut mit Python, R sowie Relationalen Datenbanksystemen und schrecke auch nicht davor zurück mich schnell und effizient in andere Technologien einzuarbeiten.</p>
+              <p>In meiner Freizeit beschäftige ich mich neben der Einarbeitung in neue Themen, mit kleineren Coding-Projekten. Zudem gehe ich gelegentlich schwimmen und wandern.</p>
+            </div>
+            <div id="aboutImg"><img src="{{ url_for('static', filename='Pictures/Placeholder.png')}}"></div>
+          </div>
+        </section>
+
+        <div class="Spacing", id="skills_navigate"></div>
+        <section class="Page-Container", id="skills">
+          <div class="Skills-Container">
+            <div class="topic">
+            <p>Data-Science Kenntnisse</p>
+            </div>
+              <div class="Skills-Section">
+          
+                <div class='card-container'>
+
+                  <div class='card'>
+                    <div class='card__top'>
+                      <img src="{{ url_for('static', filename='Pictures/PostgreMySQLMariaDB.png')}}" class="img">
+                      <h1>RDBMS</h1>
+                    </div>
+                    <div class='card__bottom'>
+                      <p>Relationale Datenbanken sowie SQL spreche ich fließend. Sie werden in nahezu allen Softwareprojekten benötigt und sind essenziell.</p>                 
+                    </div>
+                  </div>
+                
+              
+                  <div class='card'>
+                    <div class='card__top'>
+                      <img src="{{ url_for('static', filename='Pictures/Python.png')}}" class="img">
+                      <h1>Python</h1>
+                    </div>
+                    <div class='card__bottom'>
+                      <p>Python war meine erste Programmiersprache, die ich gelernt habe und ich nutze sie heute für alles Mögliche. Zum Beispiel zur Automatisierung, maschinelles Lernen oder als backend API.</p>
+                    </div>
+                  </div>
+              
+                  <div class='card'>
+                    <div class='card__top'>
+                      <img src="{{ url_for('static', filename='Pictures/ML.png')}}" class="img">
+                      <h1>Machine Learning</h1>
+                    </div>
+                    <div class='card__bottom'>
+                        <p>Ich war schon immer davon fasziniert zu sehen wie Computer lernen können. Heutzutage verwende ich ML-Algorithmen immer da wo möglich. </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            <!-- ----------- -->
+            <div class="topic">
+              <p>Business-Analytics Kenntnisse</p>
+            </div>
+            <div class="Skills-Section">
+
+              <div class='card-container'>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/R.png')}}" class="img">
+                    <h1>R</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>R ist meine bevorzugte Sprache für Analysen oder kleinere Prognosen. Meine vertrauten libraries hier sind Caret, deplyr sowie R-Shiny.</p>                 
+                  </div>
+                </div>
+            
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/MS-Excel.png')}}" class="img">
+                    <h1>MS-Excel</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>Excel ist mein bevorzugtes Tool, um mir einen ersten Überblick über meine Daten zu verschaffen. Ich bin hier vertraut mit den gängigsten Funktionen.</p>
+                  </div>
+                </div>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/data_viz.png')}}" class="img">
+                    <h1>Visualisierung</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>Ich hatte schon immer Spaß dabei, daten übersichtlich und anschaulich darzustellen, dazu verwende ich eine vielzahl von Technologien.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ------ -->
+            <div class="topic">
+              <p>Software-Engineering Kenntnisse</p>
+            </div>
+            <div class="Skills-Section">
+
+              <div class='card-container'>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/CassandraHBase.png')}}" class="img">
+                    <h1>NoSQL</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>NoSQL Datenbanksysteme sind mir kein Fremdwort. Mit sowohl Cassandra als auch Hbase habe ich bereits Berufliche Erfahrung und bin mit der Funktionsweise sehr vertraut.</p>                 
+                  </div>
+                </div>
+              
+            
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/Hadoop.png')}}" class="img">
+                    <h1>Hadoop</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>Hadoop bzw HDFS ist ein sehr stark skalierbares verteiltes Dateisystem. Ich hatte hier bereits erste berufliche Berührungspunkte.</p>
+                  </div>
+                </div>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/Docker.png')}}" class="img">
+                    <h1>Docker</h1>
+                  </div>
+                  <div class='card__bottom'>
+                      <p>Docker ist einer meiner Liebsten Tools, da ich auf mehreren Systemen arbeite. Somit setze ich alle meine Anwendungen (wo es möglich ist) in Docker-Containern auf.</p>
+                  </div>
+                </div>
+
+
+                
+              </div>
+            </div>
+
+            <!-- <div class="topic">
+              <p>Anderes </p>
+            </div> -->
+            <div class="Skills-Section">
+
+              <div class='card-container'>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/HTMLCASSJavaScript.png')}}" class="img">
+                    <h1>HTML/CSS/JavaScript</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>Diese Webseite hier ist komplett in Vanilla JS, HTML und CSS geschrieben und ich sehe Sie als ein kleines Nebenprojekt von mir an. Dadurch habe ich viel Erfahrung in den 3 Skriptsprachen gesammelt.</p>                 
+                  </div>
+                </div>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/Java.png')}}" class="img">
+                    <h1>Java</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>Mit Java arbeite ich nur im Beruflichen Zusammenhang. Dennoch bin ich hier mit dem Spring bzw Spring Boot Framework vertraut.</p>                 
+                  </div>
+                </div>
+
+                <div class='card'>
+                  <div class='card__top'>
+                    <img src="{{ url_for('static', filename='Pictures/Bash.png')}}" class="img">
+                    <h1>Bash</h1>
+                  </div>
+                  <div class='card__bottom'>
+                    <p>Shell Scripting ist für mich kein Fremdwort. In der Linux Shell fühle ich mich gut aufgehoben und ich kann nahezu alles in Bash Skripten automatisieren.</p>                 
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+        <div class="Spacing", id="contact_navigate"></div>
+        <section class="contact-background", id="contact">
+          <div class="contact-container">
+            <h1 class="brand">Wollen Sie mit mir in Kontakt treten? Hinterlassen Sie einfach eine Nachricht oder kontaktieren Sie mich direkt via E-Mail oder meinen Social Medias. </h1>
+            <div class="wrapper">
+              <div class="company-info">
+                <h3>Kontaktdaten</h3>
+                <ul>
+                  <li><i class="fa fa-map"></i>66679 Losheim am See</li>
+                  <li><i class="fa fa-mobile"></i>(+49) 1791318111</li>
+                  <li><i class="fa fa-phone"></i>06872/9941182</li>
+                  <li><i class="fa fa-envelope"></i>alexander.hilberer@gmail.com</li>
+                </ul>
+                <ul class="socials">
+                    <a href="https://www.linkedin.com/in/alexander-hilberer-166413194" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    <a href="https://www.xing.com/profile/Alexander_Hilberer/cv" target="_blank"><i class="fab fa-xing fa-2x"></i></a>
+                    <a href="https://github.com/ShollyWolly" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.kaggle.com/shollywolly" target="_blank"><i class="fab fa-kaggle fa-2x"></i></a>
+                </ul>
+              </div>
+              <div class="contact_form">
+                <form action="#" method="POST">
+                  <p>
+                    <label>Name</label>
+                    <input type="text" name="name">
+                  </p>
+                  <p>
+                    <label>Email</label>
+                    <input type="email" name="email">
+                  </p>
+                  <p class="full">
+                    <label>Betreff</label>
+                    <input type="text" name="betreff">
+                  </p>
+                  <p class="full">
+                    <label>Nachricht</label>
+                    <textarea name="message" rows="10"></textarea>
+                  </p>
+                  <p class="full">
+                    <input type="submit" value="Senden" class="button">
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>    
+        </section>
+      
+      <footer>
+        <p>Copyright &copy; 2021 Alexander Hilberer</p>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='JS/Smoothscroll.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/Nav-Bar.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/TypeWriter-script.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/Highlighting.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/main.js')}}"></script>
+</body>
+
+
+</html>

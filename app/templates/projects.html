@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width height=device-height">
+    <meta name="robots" content="noindex"/>
+    <title>Alexanders Website</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Pictures/Regression-Logo-trans.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/ProjectStyle.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- <STYLE>A {text-decoration: none;} </STYLE> -->
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+          <div class="content">
+            <ul class="menu-list">
+              <div class="icon cancel-btn">
+                <i class="fas fa-times"></i>
+              </div>
+              <li class="about"><a href="./#about_navigate">Über Mich</a></li>
+              <li class="skills"><a href="./#skills_navigate">Kenntnisse</a></li>
+              <li class="contact"><a href="./#contact_navigate">Kontakt</a></li>
+              <li id="projects"><a href="#">Projekte</a></li>
+              <li><a href="{{ url_for('download_file')}}">Lebenslauf</a></li>
+            </ul>
+            <div class="icon menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </nav>
+    </header>
+    
+
+
+        <canvas id="particles-js"></canvas>
+
+        <div class="Spacing"></div>
+
+
+        <section class="outside_container">
+
+            <div class="h1container">
+                <h1 class="h1container">Persönliche Hauptprojekte</h1>
+            </div>
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/Python-Tensorflow.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>Virtueller Assistent "Sholly"</h1>
+                            <p>Mein persöhnlicher Assistent Sholly. Sie soll mir später einmal helfen einfache bis komplexe Aufgaben zu automatisieren. Die Motivation hinter diesem Projekt sind die Assistenssysteme "Siri", "Alexa" und "Meena" (Google Assistant)</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> Python </li>
+                                <li> Tensorflow </li>
+                                <li> Numpy </li>
+                            </div>
+                            <div class="github">
+                                <a href="https://github.com/ShollyWolly" target="_blank"><i class="fab fa-github fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/HTMLCASSJavaScript.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>Webseite</h1>
+                            <p>Seit dem ich mit dem Programmieren angefangen habe, wollte ich schon immer meine eigene Webseite haben. Auf das Resultat sehen Sie gerade.</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> HTML5 </li>
+                                <li> CSS </li>
+                                <li> JavaScript </li>
+                            </div>
+                            <div class="github">
+                                <a href="/projects/homeserver"><i class="fas fa-arrow-right fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/raspiDocker.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>Homeserver</h1>
+                            <p>Auch wenn ich keinen richtigen Server habe, so habe ich einen RaspberryPi. Mit dem kleinem Computer kann man viel machen und ich verwende ihn um mein Heimnetzwerk zu verwalten.</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> Pi-Hole </li>
+                                <li> Docker </li>
+                                <li> Nginx </li>
+                            </div>
+                            <div class="github">
+                                <a href="/projects/homeserver"><i class="fas fa-arrow-right fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="h1container">
+                <h1 class="h1container">Persönliche kleinere Nebenprojekte</h1>
+            </div>
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/Cassandra.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>Cassandra Cluster Konfiguration</h1>
+                            <p>Im Rahmen meines Praktikums musste ich mich mit verschiedenen Datenbanksystemen auseinandersetzen. Eines davon war Apache Cassandra, in welches ich einen Tieferen einblick haben wollte.</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> Cassandra </li>
+                                <li> Docker </li>
+                                <li> Python </li>
+                            </div>
+                            <div class="github">
+                                <a href="https://github.com/ShollyWolly" target="_blank"><i class="fab fa-github fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/R.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>Marketing-Kampagne Klassifikation</h1>
+                            <p>Diese Projekt war eines der ersten Projekte, welche ich im Bereich ML bearbeitet habe. Es hat mir die Grundlagen der Klassifikationsverfahren sowie visualisierung in R beigebracht.</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> R </li>
+                                <li> Caret </li>
+                                <li> Dplyr </li>
+                            </div>
+                            <div class="github">
+                                <a href="https://github.com/ShollyWolly" target="_blank"><i class="fab fa-github fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/MySQL.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>MySQl Datenbank FH-Trier</h1>
+                            <p>Im Rahmen dieses Projektes habe ich meine Hochschule in einer MySQL-Datenbank dargestellt und hierbei die mir in einer Vorlesung vermittelten Kenntnisse angewand.</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> 3. Normalform </li>
+                                <li> 3 Sichten </li>
+                                <li> 12 Tabllen </li>
+                            </div>
+                            <div class="github">
+                                <a href="https://github.com/ShollyWolly" target="_blank"><i class="fab fa-github fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="IsThisRlyNec">
+                <div class="Project-Container">
+                    <div class="Img-Project-Container">
+                        <img src="{{ url_for('static', filename='Pictures/R.png')}}">
+                    </div>
+                    <div class="Text-Project-Container">
+                        <div class="Beschreibung-Project">
+                            <h1>Titanik Überlebenden-Klassifikation</h1>
+                            <p>Dieses Projekt habe ich mit einem Bekannten zusammen bearbeitet. Da dieser kurz nach mir auch in das DataScience Feld reinschauen wollte. Wir haben hier den klassischen Titanik Datensatz bearbeitet.</p>
+                        </div>
+                        <div class="Bottem-Line-Project">
+                            <div class="Stichpunkte-Project">
+                                <li> R </li>
+                                <li> ggplot2 </li>
+                                <li> Dplyr </li>
+                            </div>
+                            <div class="github">
+                                <a href="https://github.com/ShollyWolly" target="_blank"><i class="fab fa-github fa-7x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <footer>
+            <p>Copyright &copy; 2021 Alexander Hilberer</p>
+        </footer>
+
+
+
+    <script src="{{ url_for('static', filename='JS/Project-Highlight.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/main.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/Nav-Bar.js')}}"></script>
+
+</body>
+
+</html>
